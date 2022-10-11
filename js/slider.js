@@ -17,6 +17,7 @@ function getRandomNum(min, max) {
 
 
 function setBg() {
+  document.querySelector(".inputSelect").value === "Github"
   const img = new Image();
   img.src = `https://raw.githubusercontent.com/EvgeniyLageev/momentum-backgrounds/main/${getTimeOfDay()}/${randomNum < 10 ? "0" + randomNum : randomNum}.webp`
   img.onload = () => {
@@ -60,7 +61,11 @@ async function setBgUnsplash() {
   const img2 = new Image()
   img2.src = data.urls.regular;
   img2.onload = () => {
-    wrapper.style.backgroundImage = `url("${img2.src}")`
+    try {
+      wrapper.style.backgroundImage = `url("${img2.src}")`
+    } catch {
+      setBg()
+    }
   };
 }
 
