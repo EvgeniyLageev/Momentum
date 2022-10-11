@@ -83,7 +83,11 @@ function setLocalStorage() {
 window.addEventListener('beforeunload', setLocalStorage)
 
 function getLocalStorage() {
-  document.querySelector(".inputSelect").value = localStorage.getItem('select');
+  if (localStorage.getItem('select')) {
+    document.querySelector(".inputSelect").value = localStorage.getItem('select');
+  } else {
+    document.querySelector(".inputSelect").value === "Github";
+  }
   chooseSource()
 }
 window.addEventListener('load', getLocalStorage)
