@@ -57,24 +57,21 @@ async function setBgUnsplash() {
   const url = `https://api.unsplash.com/photos/random?orientation=landscape&query=${getTimeOfDay()}&client_id=QmgkLwumbx8tBIOkVGYspHahY_C974VGpWnJxw5COyo`;
   const res = await fetch(url);
   const data = await res.json();
-  const img = new Image()
-  img.src = data.urls.regular;
-  img.onload = () => {
-    wrapper.style.backgroundImage = `url("${img.src}")`
+  const img2 = new Image()
+  img2.src = data.urls.regular;
+  img2.onload = () => {
+    wrapper.style.backgroundImage = `url("${img2.src}")`
   };
 }
-
-
-
 
 async function setBgFlickr() {
   const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=98544aae0225e383e759f18ecee3aa90&tags=${getTimeOfDay()}&extras=url_l&format=json&nojsoncallback=1`;
   const res = await fetch(url);
   const data = await res.json();
-  try {
-    wrapper.style.backgroundImage = `url("${data.photos.photo[randomNum].url_l}")`
-  } catch {
-    setBg()
+  const img3 = new Image()
+  img3.src = data.photos.photo[randomNum].url_l;
+  img3.onload = () => {
+    wrapper.style.backgroundImage = `url("${img3.src}")`
   }
 }
 
