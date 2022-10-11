@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./img/favicon.ico">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/styleTodo.css">
+  <link rel="stylesheet" href="./style/owfont-regular.css">
+  <link rel="stylesheet" href="./style/media.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <title>Momentum</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <img class="sliderPrev" src="./img/slider-prev.svg" alt="arrow">
+
+    <header class="header">
+      <div class="player">
+        <div class="player-controls">
+
+
+          <div class="timelineWrapper">
+            <div class="nameSong"></div>
+            <div class="timelineWrapper2">
+              <div class="timeline">
+                <div class="progress"></div>
+              </div>
+              <div class="current">0:00</div>
+              <div class="divider">/</div>
+              <div class="songLength">0:00</div>
+            </div>
+          </div>
+
+          <div class="buttonsWrapper">
+            <button class="play-prev player-icon"></button>
+            <button class="play player-icon"></button>
+            <button class="play-next player-icon"></button>
+
+            <div class="volumeWrapper">
+              <div class="volume-button">
+                <div class="volume icono-volumeMedium"></div>
+              </div>
+
+              <div class="volume-container">
+                <div class="volume-slider">
+                  <div class="volume-percentage"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+        <ul class="play-list"></ul>
+      </div>
+
+      <div class="weather">
+
+        <input type="text" class="city" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind">wind</div>
+        <div class="humidity">humidity</div>
+
+
+      </div>
+    </header>
+
+
+    <main class="main">
+      <div class="time"></div>
+      <div class="date"></div>
+      <div class="helloWrapper">
+        <div class="hello"></div>
+        <input class="name" type="text">
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="quoteContainer">
+        <button class="change-quote"></button>
+        <div class="quoteWrapper">
+          <div class="quote"></div>
+          <div class="author"></div>
+        </div>
+      </div>
+
+
+      <div class="wrapper2">
+
+
+        <div class="controls">
+          <div class="filters">
+            <span class="active" id="all">Today</span>
+            <span id="pending">Pending</span>
+            <span id="completed">Done</span>
+          </div>
+          <button class="clear-btn">Clear All</button>
+        </div>
+
+
+        <ul class="task-box"></ul>
+        <div class="task-input">
+          <input type="text" placeholder="Add a new task">
+        </div>
+      </div>
+
+      <div class="iconWrapper">
+
+
+        <div class="settingWrapper">
+
+          <div class="settingsDiv">Settings</div>
+
+          <ul class="settingsUl">
+
+            <li class="settingsLi"><span id="settingsLiLanguage">Language</span>
+              <div class="slideThree0">
+                <input data-name="language" class="inputSettings" type="checkbox" value="None" id="slideThree0"
+                  name="check" />
+                <label class="inputLabel" for="slideThree0"></label>
+              </div>
+            </li>
+
+            <li class="settingsLi"><span id="settingsLiTime">Time</span>
+              <div class="slideThree">
+                <input data-name="time" class="inputSettings" type="checkbox" value="None" id="slideThree1"
+                  name="check" />
+                <label class="inputLabel" for="slideThree1"></label>
+              </div>
+            </li>
+
+
+            <li class="settingsLi"><span id="settingsLiDate">Date</span>
+              <div class="slideThree">
+                <input data-name="date" class="inputSettings" type="checkbox" value="None" id="slideThree2"
+                  name="check" />
+                <label class="inputLabel" for="slideThree2"></label>
+              </div>
+            </li>
+
+
+            <li class="settingsLi"><span id="settingsLiGreeting">Greeting</span>
+              <div class="slideThree">
+                <input data-name="helloWrapper" class="inputSettings" type="checkbox" value="None" id="slideThree3"
+                  name="check" />
+                <label class="inputLabel" for="slideThree3"></label>
+              </div>
+            </li>
+
+
+            <li class="settingsLi"><span id="settingsLiQuotes">Quotes</span>
+              <div class="slideThree">
+                <input data-name="quoteContainer" class="inputSettings" type="checkbox" value="None" id="slideThree4"
+                  name="check" />
+                <label class="inputLabel" for="slideThree4"></label>
+              </div>
+            </li>
+
+
+            <li class="settingsLi"><span id="settingsLiWeather">Weather</span>
+              <div class="slideThree">
+                <input data-name="weather" class="inputSettings" type="checkbox" value="None" id="slideThree5"
+                  name="check" />
+                <label class="inputLabel" for="slideThree5"></label>
+              </div>
+            </li>
+
+
+            <li class="settingsLi"><span id="settingsLiAudio">Audio</span>
+              <div class="slideThree">
+                <input data-name="player" class="inputSettings" type="checkbox" value="None" id="slideThree6"
+                  name="check" />
+                <label class="inputLabel" for="slideThree6"></label>
+              </div>
+            </li>
+
+
+            <li class="settingsLi"><span id="settingsLiTodo">Todo</span>
+              <div class="slideThree">
+                <input data-name="todoName" class="inputSettings" type="checkbox" value="None" id="slideThree7"
+                  name="check" />
+                <label class="inputLabel" for="slideThree7"></label>
+              </div>
+            </li>
+
+            <li class="settingsLi"><span id="settingsSource">Source</span>
+              <select class="inputSelect" name="source">
+                <option value="Github" selected>Github</option>
+                <option value="Unsplash">Unsplash</option>
+                <option value="Flickr">Flickr</option>
+              </select></p>
+            </li>
+
+          </ul>
+
+
+        </div>
+
+        <div class="divLink">
+          <a href="https://github.com/EvgeniyLageev" target="_blank"><img class="gitLink" src="../img/gitLogo.png"
+              alt="logo"></a>
+          <p>2022</p>
+          <a href="https://rs.school/js/" target="_blank"><img class="rssLink" src="../img/rsschool.svg" alt="logo"></a>
+
+
+        </div>
+
+        <span class="todoName">Todo</span>
+      </div>
+
+
+
+    </footer>
+
+    <img class="sliderNext" src="./img/slider-next.svg" alt="arrow">
+
+  </div>
+
+
+  <script type="module" src="/js/settings.js"></script>
+  <script type="module" src="/js/time.js"></script>
+  <script type="module" src="/js/hello.js"></script>
+  <script type="module" src="/js/slider.js"></script>
+  <script type="module" src="/js/wheather.js"></script>
+  <script type="module" src="/js/quotes.js"></script>
+  <script type="module" src="/js/audio.js"></script>
+  <script src="/js/todo.js"></script>
+</body>
+
+</html>

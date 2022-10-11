@@ -1,0 +1,85 @@
+@media (max-width:768px) {
+
+  .time {
+    font-size: 50px;
+  }
+
+  .hello {
+    font-size: 25px;
+  }
+
+  .name {
+    font-size: 25px;
+  }
+
+  .sliderPrev,
+  .sliderNext {
+    width: 30px;
+  }
+
+  .wrapper2 {
+    display: none;
+  }
+
+  .wrapper2Active {
+    display: block;
+  }
+
+  .quoteWrapper {
+    padding-bottom: 50px;
+  }
+
+  .quote {
+    min-height: 50px;
+  }
+
+  .weather {
+    row-gap: 6px;
+    padding: 0;
+    width: 33%;
+  }
+
+  .player {
+    padding: 0;
+    width: 53%;
+  }
+
+  .play-item {
+    gap: 5px;
+    padding: 2px;
+    padding-left: 5px;
+    opacity: 1;
+  }
+
+  .player-controls {
+    margin-bottom: 10px;
+    gap: 0px;
+  }
+
+  .timeline {
+    width: 60%;
+  }
+
+  .play-prev,
+  .play-next {
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+  }
+
+  .play {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+  }
+
+  .volume-slider {
+    max-width: 80px;
+  }
+
+  .buttonsWrapper,
+  .timelineWrapper2 {
+    padding-left: 5px;
+  }
+
+}
