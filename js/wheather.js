@@ -42,6 +42,8 @@ window.addEventListener('beforeunload', setLocalStorage)
 function getLocalStorage() {
   if (localStorage.getItem('city')) {
     city.value = localStorage.getItem('city');
+  } else {
+    city.value = state.language === "en" ? "Minsk" : "Минск";
   }
 }
 window.addEventListener('load', getLocalStorage)
