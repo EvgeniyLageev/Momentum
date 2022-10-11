@@ -57,16 +57,16 @@ function getSlidePrev() {
 async function setBgUnsplash() {
   const url = `https://api.unsplash.com/photos/random?orientation=landscape&query=${getTimeOfDay()}&client_id=QmgkLwumbx8tBIOkVGYspHahY_C974VGpWnJxw5COyo`;
   const res = await fetch(url);
-  const data = await res.json();
-  const img2 = new Image()
-  img2.src = data.urls.regular;
-  img2.onload = () => {
-    try {
+  if (res.ok) {
+    const data = await res.json();
+    const img2 = new Image()
+    img2.src = data.urls.regular;
+    img2.onload = () => {
       wrapper.style.backgroundImage = `url("${img2.src}")`
-    } catch {
-      setBg()
-    }
-  };
+    };
+  } else {
+    setBg()
+  }
 }
 
 async function setBgFlickr() {
