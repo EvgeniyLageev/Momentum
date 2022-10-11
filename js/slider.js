@@ -42,16 +42,31 @@ function getSlidePrev() {
   chooseSource()
 }
 
+// async function setBgUnsplash() {
+//   const url = `https://api.unsplash.com/photos/random?orientation=landscape&query=${getTimeOfDay()}&client_id=QmgkLwumbx8tBIOkVGYspHahY_C974VGpWnJxw5COyo`;
+//   const res = await fetch(url);
+//   const data = await res.json();
+//   try {
+//     wrapper.style.backgroundImage = `url("${data.urls.regular}")`
+//   } catch {
+//     setBg()
+//   }
+// }
+
 async function setBgUnsplash() {
   const url = `https://api.unsplash.com/photos/random?orientation=landscape&query=${getTimeOfDay()}&client_id=QmgkLwumbx8tBIOkVGYspHahY_C974VGpWnJxw5COyo`;
   const res = await fetch(url);
   const data = await res.json();
-  try {
-    wrapper.style.backgroundImage = `url("${data.urls.regular}")`
-  } catch {
-    setBg()
-  }
+  const img = new Image()
+  img.src = data.urls.regular;
+  img.onload = () => {
+    wrapper.style.backgroundImage = `url("${img.src}")`
+  };
 }
+
+
+
+
 async function setBgFlickr() {
   const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=98544aae0225e383e759f18ecee3aa90&tags=${getTimeOfDay()}&extras=url_l&format=json&nojsoncallback=1`;
   const res = await fetch(url);
