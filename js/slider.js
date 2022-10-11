@@ -17,7 +17,6 @@ function getRandomNum(min, max) {
 
 
 function setBg() {
-  document.querySelector(".inputSelect").value === "Github"
   const img = new Image();
   img.src = `https://raw.githubusercontent.com/EvgeniyLageev/momentum-backgrounds/main/${getTimeOfDay()}/${randomNum < 10 ? "0" + randomNum : randomNum}.webp`
   img.onload = () => {
@@ -57,15 +56,11 @@ function getSlidePrev() {
 async function setBgUnsplash() {
   const url = `https://api.unsplash.com/photos/random?orientation=landscape&query=${getTimeOfDay()}&client_id=QmgkLwumbx8tBIOkVGYspHahY_C974VGpWnJxw5COyo`;
   const res = await fetch(url);
-  if (res.ok) {
-    const data = await res.json();
-    const img2 = new Image()
-    img2.src = data.urls.regular;
-    img2.onload = () => {
-      wrapper.style.backgroundImage = `url("${img2.src}")`
-    };
-  } else {
-    setBg()
+  const data = await res.json();
+  const img2 = new Image();
+  img2.src = data.urls.regular;
+  img2.onload = () => {
+    wrapper.style.backgroundImage = `url("${img2.src}")`
   }
 }
 
